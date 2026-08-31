@@ -28,7 +28,9 @@ A real-time solar PV telemetry monitoring system built with an Arduino, INA219 c
 * **INA219 I2C**: `SDA` $\rightarrow$ Arduino `A4`, `SCL` $\rightarrow$ Arduino `A5`
 * **DHT11 Data Pin**: Digital Pin 2
 
-![Hardware Setup](solar_monitor_circuit.jpeg)
+![Hardware Setup](images/solar_monitor_circuit.jpeg)
+
+![Hardware Setup](images/hardware.png)
 
 ---
 
@@ -36,8 +38,11 @@ A real-time solar PV telemetry monitoring system built with an Arduino, INA219 c
 
 To validate physical hardware behavior, an equivalent photovoltaic circuit model was constructed in LTspice. The solar array is modeled as an ideal current source ($I_{ph}$) in parallel with a series diode string ($N=9$) to clamp open-circuit voltage at ~6.25V.
 
-![LTspice Schematic](Screenshot 2026-08-31 164603.png)
-![LTspice Simulation Plot](Screenshot 2026-08-31 164554.png)
+![LTspice Schematic](images/noon_sim.png)
+
+![LTspice Schematic](images/simulation.png)
+
+
 
 ### Key Simulation Observations
 * **Open-Circuit Voltage ($V_{oc}$):** Clamps at $6.28\text{V}$.
@@ -58,13 +63,13 @@ Data was logged under three distinct environmental conditions to analyze non-lin
 ### Telemetry Screenshots
 
 #### 1. Indoor / Flashlight Testing
-![Indoor Telemetry](Screenshot 2026-08-29 172633.png)
+![Indoor Telemetry](images/indoor_readings.png)
 
 #### 2. Late Afternoon (5:48 PM) Low Irradiance
-![Evening Telemetry](Screenshot 2026-08-29 174843.png)
+![Evening Telemetry](images/evening_reading.png)
 
 #### 3. Direct Solar Irradiance (3:00 PM Peak)
-![Peak Sun Telemetry](Screenshot 2026-08-30 154720.png)
+![Peak Sun Telemetry](images/noon_readings.png)
 
 ---
 
